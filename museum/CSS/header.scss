@@ -1,0 +1,52 @@
+.header {
+  &__container {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  &:hover {
+    filter: brightness(60%);
+    transition: 200ms;
+  }
+  &__img {
+    width: 50px;
+    height: 34px;
+    margin: 0 25px 7px 0;
+    background: url(../assets/svg/Vector.svg) center no-repeat;
+  }
+  &__text {
+    font-family: "Forum", cursive;
+    font-size: 28px;
+    line-height: 30.91px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+}
+.menu {
+  &__row {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 830px;
+  }
+  &__item {
+    padding: 0 0 0 56px;
+    & > a {
+      font-weight: 200;
+      line-height: 25.78px;
+      letter-spacing: 2px;
+      color: #ffffff;
+      &:hover {
+        color: #9d8665;
+        transition: 200ms;
+      }
+    }
+  }
+}
