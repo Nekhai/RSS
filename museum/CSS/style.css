@@ -311,7 +311,7 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 180px;
-  margin: 0 0 0 -2px;
+  margin: 0 0 0 -3px;
 }
 
 .slider__icon {
@@ -340,5 +340,66 @@ footer {
 
 .active {
   background: #d2b183;
+}
+
+.visiting__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 74px 60px;
+  padding: 103px 0 0 0;
+}
+
+.card {
+  display: block;
+}
+
+.card:hover .card__title::after {
+  width: 440px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.card__img {
+  width: 440px;
+  height: 285px;
+}
+
+.card__title {
+  position: relative;
+  padding: 25px 0 23px 0;
+  font-family: "Forum", cursive;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  height: 2px;
+  width: 300px;
+  background: #710707;
+}
+
+.card__subtitle {
+  padding: 0 0 10px 0;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.card__text {
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
 }
 /*# sourceMappingURL=style.css.map */
