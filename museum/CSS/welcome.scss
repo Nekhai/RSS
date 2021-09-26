@@ -1,0 +1,85 @@
+.welcome {
+  padding: 0;
+  &__container {
+    position: relative;
+    background: url(../assets/img/louvre.jpg) 100% 0 no-repeat, #030303;
+  }
+  &__content {
+    padding: 150px 0 272px 0;
+  }
+  &__text {
+    padding: 25px 0 75px 0;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: 2px;
+    color: #ffffff;
+  }
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 75px;
+  background: #710707;
+  border-radius: 10px;
+  &:hover {
+    background: #9d8665;
+    transition: 200ms;
+  }
+  & > a {
+    padding: 25px 64px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    color: #ffffff;
+  }
+}
+.slider {
+  &__control {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 600px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #030303;
+    padding: 0 75px;
+  }
+  &__number {
+    display: flex;
+    justify-content: space-between;
+    width: 75px;
+    color: #ffffff;
+    line-height: 40px;
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    margin: 0 0 0 -3px;
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+  }
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+  }
+  &__btn-prev {
+    background: none;
+  }
+  &__btn-next {
+    background: none;
+  }
+}
+.active {
+  background: #d2b183;
+}
