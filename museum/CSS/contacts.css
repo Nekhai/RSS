@@ -1,0 +1,32 @@
+.contacts__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 103px 0 0 0;
+}
+
+.contacts__title {
+  padding: 0 0 50px 0;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+.contacts__text {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.contacts__text p {
+  padding: 0 0 25px 0;
+}
+
+.contacts__text a {
+  color: #000000;
+  text-decoration: none;
+}
+/*# sourceMappingURL=contacts.css.map */

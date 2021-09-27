@@ -1,0 +1,139 @@
+.video {
+  &__player {
+    position: relative;
+  }
+  &__start {
+    position: absolute;
+    left: calc(50% - 110px);
+    top: calc(50% - 110px);
+    width: 220px;
+    height: 220px;
+    border: 10px solid #ffffff;
+    border-radius: 50%;
+    background: none;
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 60px);
+      left: calc(50% - 30px);
+      width: 0px;
+      height: 0px;
+      border: 60px solid transparent;
+      border-left: 90px solid #ffffff;
+    }
+    &:hover {
+      filter: brightness(60%);
+      transition: 400ms;
+    }
+  }
+  &__control {
+    height: 85px;
+    background: #000000;
+    margin: 0 0 40px 0;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 75px 0;
+  }
+  &__text {
+    padding: 6px 0 0 0;
+    width: 50%;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 38px;
+  }
+}
+.control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px 0 30px;
+  &__progress {
+    background: linear-gradient(
+      to right,
+      #710707 0%,
+      #710707 54%,
+      #fff 54%,
+      #fff 100%
+    );
+    height: 8px;
+    width: 929px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+    &::-webkit-slider-thumb {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      -webkit-appearance: none;
+      cursor: ew-resize;
+      background: #ffffff;
+    }
+  }
+  &__volume {
+    background: linear-gradient(
+      to right,
+      #710707 0%,
+      #710707 40%,
+      #fff 40%,
+      #fff 100%
+    );
+    height: 8px;
+    width: 155px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+    &::-webkit-slider-thumb {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      -webkit-appearance: none;
+      cursor: ew-resize;
+      background: #ffffff;
+    }
+  }
+}
+.btn-control {
+  background: none;
+  &:hover {
+    filter: brightness(60%);
+    transition: 200ms;
+  }
+}
+.list {
+  &__video {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 12px;
+    margin: 40px auto 0;
+  }
+  &__icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #999999;
+    margin: 0 0 3px 0;
+    &:hover {
+      cursor: pointer;
+      transition: 200ms;
+      background: #710707;
+    }
+  }
+  &__active {
+    background: #333333;
+  }
+  &__btn {
+    background: none;
+    &:hover svg > path {
+      transition: 200ms;
+      fill: #710707;
+    }
+  }
+}

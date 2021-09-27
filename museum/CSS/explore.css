@@ -1,0 +1,46 @@
+.explore__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 60px;
+}
+
+.explore__text {
+  padding: 103px 2px 0 0;
+}
+
+.explore__text p {
+  padding: 0 0 26px 0;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: #ffffff;
+}
+
+.explore__text p span {
+  color: #caaa7d;
+}
+
+.explore__img {
+  position: relative;
+  width: 720px;
+  height: 700px;
+  margin: 15px 0 0 0;
+  z-index: 1;
+}
+
+.explore__pic {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+}
+
+.explore__pic-mid {
+  position: absolute;
+  left: 422px;
+  z-index: 3;
+}
+/*# sourceMappingURL=explore.css.map */
