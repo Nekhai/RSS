@@ -55,10 +55,6 @@
   line-height: 38px;
 }
 
-.video__list {
-  margin: 0 0 40px 0;
-}
-
 .control {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -144,7 +140,7 @@
           align-items: center;
   width: 200px;
   height: 12px;
-  margin: 40px auto 75px;
+  margin: 40px auto 0;
 }
 
 .list__icon {

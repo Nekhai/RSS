@@ -199,7 +199,7 @@
                 </div>
             </div>
         </section>  
-        <!-- art gallery -->
+        <!-- gallery -->
         <section class="gallery section dark-section" id="gallery">
             <div class="gallery__container container slider">
                 <div class="gallery__content">
@@ -207,6 +207,58 @@
                 </div>
             </div>
         </section>
+        <!-- tickets -->
+        <section class="tickets section">
+            <div class="tickets__container container" id="tickets">
+                <h2 class="section-title dark-section-title underline-title">Buy tickets</h2>
+                <div class="tickets__wrap">
+                    <div class="tickets__img">
+                        <img src="./assets/img/tickets.jpg" alt="picture">
+                    </div>
+                    <div class="tickets__content">
+                        <div class="tickets__type type">
+                            <h4 class="type__title">Ticket Type</h4>
+                            <div class="type__input">
+                                <div class="type__radio-btn">
+                                    <input type="radio" checked="checked" id="ticket-choice1" name="ticket">
+                                    <label for="ticket-choice1" class="type__text">Permanent exhibition</label>
+                                </div>
+                                <div class="type__radio-btn">
+                                    <input type="radio" id="ticket-choice2" name="ticket">
+                                    <label for="ticket-choice2" class="type__text">Temporary exhibition</label>
+                                </div>
+                                <div class="type__radio-btn">
+                                    <input type="radio" id="ticket-choice3" name="ticket">
+                                    <label for="ticket-choice3" class="type__text">Combined Admission</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tickets__amount amount">
+                            <h4 class="amount__title">Amount</h4>
+                            <div class="amount__block-basic">
+                                <p class="amount__subtitle">Basic 18+</p>
+                                <div class="amount__number">
+                                    <button class="amount__btn" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                                    <input type="number" min="0" max="20" value="1" readonly class="number">
+                                    <button class="amount__btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                </div>
+                            </div>
+                            <div class="amount__block-senior">
+                                <p class="amount__subtitle">Senior 65+</p>
+                                <div class="amount__number">
+                                    <button class="amount__btn" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                                    <input type="number" min="0" max="20" value="1" readonly class="number">
+                                    <button class="amount__btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                </div>
+                            </div>
+                            <p class="amount__total">Total €220</p>
+                            <button class="amount__btn-buy">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    
+        <div class="parallax"></div>
     </main>
     <script src="script.js"></script>
 </body>

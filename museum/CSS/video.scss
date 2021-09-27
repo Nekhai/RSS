@@ -43,9 +43,6 @@
     font-size: 22px;
     line-height: 38px;
   }
-  &__list {
-    margin: 0 0 40px 0;
-  }
 }
 .control {
   display: flex;
@@ -115,7 +112,7 @@
     align-items: center;
     width: 200px;
     height: 12px;
-    margin: 40px auto 75px;
+    margin: 40px auto 0;
   }
   &__icon {
     width: 12px;
