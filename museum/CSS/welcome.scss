@@ -67,19 +67,32 @@
     width: 16px;
     height: 16px;
     background: #ffffff;
+    &:hover {
+      transition: 200ms;
+      background: #9d8665;
+      cursor: pointer;
+    }
   }
   &__btn {
     display: flex;
     justify-content: space-between;
     width: 80px;
   }
-  &__btn-prev {
-    background: none;
-  }
   &__btn-next {
     background: none;
+    &:hover svg > path {
+      transition: 200ms;
+      fill: #9d8665;
+    }
   }
-}
-.active {
-  background: #d2b183;
+  &__btn-prev {
+    background: none;
+    &:hover svg > path {
+      transition: 200ms;
+      fill: #9d8665;
+    }
+  }
+  &__active {
+    background: #d2b183;
+  }
 }

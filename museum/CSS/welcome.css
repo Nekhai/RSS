@@ -99,6 +99,13 @@
   background: #ffffff;
 }
 
+.slider__icon:hover {
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  background: #9d8665;
+  cursor: pointer;
+}
+
 .slider__btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,15 +116,27 @@
   width: 80px;
 }
 
-.slider__btn-prev {
-  background: none;
-}
-
 .slider__btn-next {
   background: none;
 }
 
-.active {
+.slider__btn-next:hover svg > path {
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  fill: #9d8665;
+}
+
+.slider__btn-prev {
+  background: none;
+}
+
+.slider__btn-prev:hover svg > path {
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  fill: #9d8665;
+}
+
+.slider__active {
   background: #d2b183;
 }
 /*# sourceMappingURL=welcome.css.map */
