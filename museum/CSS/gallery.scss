@@ -1,18 +1,23 @@
 .gallery {
   padding: 75px 0 0 0;
   &__picture-container {
-    height: 2035px;
+    height: 1960px;
     overflow-y: hidden;
     position: relative;
   }
+  &__content {
+    padding: 0 0 75px 0;
+  }
   &__picture-inner-container {
-    height: 3000px;
+    height: 2950px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     row-gap: 36px;
     column-gap: 24px;
-    justify-content: center;
+    &:first-child {
+      margin: 50px 0 0 0;
+    }
   }
   &__blur {
     width: 100%;
@@ -21,4 +26,7 @@
     bottom: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
   }
+}
+.gallery-img-padding {
+  padding: 50px 0 0 0;
 }
