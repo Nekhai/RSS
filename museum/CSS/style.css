@@ -830,6 +830,131 @@ footer {
   background: url(../assets/img/parallax.jpg) 0/cover fixed;
 }
 
+.booking {
+  position: fixed;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  top: 0;
+  left: -2500px;
+  background: #00000050;
+  opacity: 0;
+}
+
+.booking__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1440px;
+  height: 845px;
+  background: #ffffff;
+}
+
+.booking__btn-close {
+  position: absolute;
+  background: none;
+  top: 30px;
+  right: 30px;
+}
+
+.booking__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 970px;
+  height: 663px;
+}
+
+.booking__text {
+  width: 400px;
+}
+
+.booking__credit {
+  width: 530px;
+  border: 1px solid #000000;
+}
+
+.booking__title {
+  font-size: 50px;
+  line-height: 55px;
+  text-transform: uppercase;
+  color: #9d8665;
+  font-family: "Forum", cursive;
+  font-weight: 400;
+  padding: 0 0 15px 0;
+}
+
+.booking__subtitle {
+  font-size: 18px;
+  line-height: 21px;
+  color: #710707;
+  position: relative;
+}
+
+.booking__subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #740c11;
+  opacity: 0.9;
+}
+
+.credit {
+  padding: 25px 30px 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.credit__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+  color: #272727;
+}
+
+.credit__subtitle {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #740c11;
+  opacity: 0.9;
+}
+
+.animation {
+  left: 0;
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .contacts__content {
   display: -webkit-box;
   display: -ms-flexbox;
