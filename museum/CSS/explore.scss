@@ -55,14 +55,34 @@
     &__img {
       margin: 2px auto 0;
     }
-    // &__pic {
-    //   position: absolute;
-    //   left: 0;
-    //   z-index: 2;
-    // }
-    // &__pic-mid {
-    //   position: absolute;
-    //   left: 422px;
-    //   z-index: 3;
+  }
+}
+@media (max-width: 768px) {
+  .explore {
+    &__container {
+      // display: flex;
+      // justify-content: space-between;
+      // gap: 60px;
+    }
+    &__text {
+      display: none;
+    }
+    &__img {
+      position: relative;
+      width: 728px;
+      height: 705px;
+      margin: 0;
+      z-index: 1;
+    }
+    &__pic {
+      position: absolute;
+      left: 0;
+      z-index: 2;
+    }
+    &__pic-mid {
+      position: absolute;
+      left: 422px;
+      z-index: 3;
+    }
   }
 }

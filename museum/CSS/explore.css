@@ -66,4 +66,27 @@
     margin: 2px auto 0;
   }
 }
+
+@media (max-width: 768px) {
+  .explore__text {
+    display: none;
+  }
+  .explore__img {
+    position: relative;
+    width: 728px;
+    height: 705px;
+    margin: 0;
+    z-index: 1;
+  }
+  .explore__pic {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+  }
+  .explore__pic-mid {
+    position: absolute;
+    left: 422px;
+    z-index: 3;
+  }
+}
 /*# sourceMappingURL=explore.css.map */

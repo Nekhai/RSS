@@ -52,3 +52,28 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .contacts {
+    &__content {
+      flex-direction: column;
+      padding: 63px 0 25px 0;
+    }
+    &__map {
+      width: 728px;
+      height: 476px;
+    }
+    &__title {
+      padding: 0 0 40px 0;
+      font-size: 20px;
+      line-height: 23px;
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 21px;
+      padding: 0 0 25px 0;
+      & p {
+        padding: 0 0 15px 0;
+      }
+    }
+  }
+}

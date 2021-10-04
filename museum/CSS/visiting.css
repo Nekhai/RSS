@@ -91,4 +91,27 @@
     letter-spacing: 3px;
   }
 }
+
+@media (max-width: 768px) {
+  .visiting__content {
+    gap: 40px 56px;
+    padding: 63px 0 40px 0;
+  }
+  .card {
+    width: 280px;
+  }
+  .card__title {
+    font-size: 22px;
+    line-height: 34px;
+    letter-spacing: 3px;
+    padding: 19px 0 17px 0;
+  }
+  .card__title::after {
+    width: 150px;
+  }
+  .card__subtitle {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
 /*# sourceMappingURL=visiting.css.map */

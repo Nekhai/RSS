@@ -56,3 +56,25 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .gallery {
+    padding: 40px 0 0 0;
+    &__picture-container {
+      height: 1080px;
+    }
+    &__content {
+      padding: 0 0 40px 0;
+    }
+    &__picture-inner-container {
+      height: 2700px;
+      row-gap: 24px;
+      column-gap: 24px;
+    }
+    &__picture-inner-container > img {
+      width: 352px;
+    }
+    &__blur {
+      height: 235px;
+    }
+  }
+}

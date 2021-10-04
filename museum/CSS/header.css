@@ -179,4 +179,16 @@
     display: block;
   }
 }
+
+@media (max-width: 768px) {
+  .header__container {
+    height: 110px;
+  }
+  .logo__img {
+    margin: 0 25px 0 0;
+  }
+  .logo__text {
+    padding: 10px 0 0 0;
+  }
+}
 /*# sourceMappingURL=header.css.map */

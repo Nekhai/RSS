@@ -132,3 +132,12 @@ footer {
     }
   }
 }
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .section {
+    padding: 40px 0;
+  }
+}

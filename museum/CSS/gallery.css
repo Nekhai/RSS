@@ -72,4 +72,28 @@
     height: 239px;
   }
 }
+
+@media (max-width: 768px) {
+  .gallery {
+    padding: 40px 0 0 0;
+  }
+  .gallery__picture-container {
+    height: 1080px;
+  }
+  .gallery__content {
+    padding: 0 0 40px 0;
+  }
+  .gallery__picture-inner-container {
+    height: 2700px;
+    row-gap: 24px;
+    -webkit-column-gap: 24px;
+            column-gap: 24px;
+  }
+  .gallery__picture-inner-container > img {
+    width: 352px;
+  }
+  .gallery__blur {
+    height: 235px;
+  }
+}
 /*# sourceMappingURL=gallery.css.map */

@@ -57,4 +57,31 @@
     padding: 0 0 15px 0;
   }
 }
+
+@media (max-width: 768px) {
+  .contacts__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 63px 0 25px 0;
+  }
+  .contacts__map {
+    width: 728px;
+    height: 476px;
+  }
+  .contacts__title {
+    padding: 0 0 40px 0;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .contacts__text {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 0 0 25px 0;
+  }
+  .contacts__text p {
+    padding: 0 0 15px 0;
+  }
+}
 /*# sourceMappingURL=contacts.css.map */

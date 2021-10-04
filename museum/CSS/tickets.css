@@ -312,4 +312,43 @@
             justify-content: space-between;
   }
 }
+
+@media (max-width: 768px) {
+  .tickets__wrap {
+    padding: 63px 0 0 0;
+  }
+  .tickets__img {
+    width: 444px;
+    height: 340px;
+  }
+  .tickets__img > img {
+    margin: 0;
+  }
+  .tickets__content {
+    padding: 0 0 0 10px;
+    margin: 0 auto;
+  }
+  .amount__title {
+    padding: 0 0 39px 0;
+  }
+  .amount__subtitle {
+    padding: 0 0 10px 0;
+  }
+  .amount__block-basic {
+    padding: 0 0 25px 0;
+  }
+  .amount__number {
+    padding: 0 13px;
+    width: 175px;
+  }
+  .amount__block-senior {
+    padding: 0;
+  }
+  .amount__total {
+    padding: 39px 10px 40px 0;
+  }
+  .parallax {
+    height: 300px;
+  }
+}
 /*# sourceMappingURL=tickets.css.map */

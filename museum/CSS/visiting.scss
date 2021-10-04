@@ -82,3 +82,27 @@
     letter-spacing: 3px;
   }
 }
+@media (max-width: 768px) {
+  .visiting {
+    &__content {
+      gap: 40px 56px;
+      padding: 63px 0 40px 0;
+    }
+  }
+  .card {
+    width: 280px;
+    &__title {
+      font-size: 22px;
+      line-height: 34px;
+      letter-spacing: 3px;
+      padding: 19px 0 17px 0;
+      &::after {
+        width: 150px;
+      }
+    }
+    &__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}

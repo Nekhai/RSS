@@ -146,3 +146,33 @@
     line-height: 90px;
   }
 }
+@media (max-width: 768px) {
+  .welcome {
+    &__container {
+      background: url(../assets/img/1.jpg) 100% 68% no-repeat;
+    }
+    &__content {
+      text-align: center;
+      padding: 0;
+    }
+    &__text {
+      padding: 25px 0 693px 0;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+  .btn {
+    display: none;
+  }
+  .section-title-welcome {
+    line-height: 60px;
+  }
+  .slider {
+    &__control {
+      height: 100px;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 163px 0;
+    }
+  }
+}
