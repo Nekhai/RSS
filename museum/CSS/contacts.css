@@ -8,6 +8,12 @@
   padding: 103px 0 0 0;
 }
 
+.contacts__map {
+  width: 960px;
+  height: 620px;
+  background: url(../assets/img/map.png) 100% 0 no-repeat;
+}
+
 .contacts__title {
   padding: 0 0 50px 0;
   font-weight: 500;
@@ -28,5 +34,27 @@
 .contacts__text a {
   color: #000000;
   text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .contacts__content {
+    padding: 83px 0 2px 0;
+  }
+  .contacts__map {
+    width: 694px;
+    height: 454px;
+  }
+  .contacts__title {
+    padding: 0 0 35px 0;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .contacts__text {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .contacts__text p {
+    padding: 0 0 15px 0;
+  }
 }
 /*# sourceMappingURL=contacts.css.map */

@@ -30,6 +30,21 @@
                     <li class="menu__item"><a href="#contacts">Contacts</a></li>
                 </ul>
             </nav>
+            <div class="header__burger-wrap">
+                <button class="header__burger-btn" id="burger-btn"></button>
+            </div>
+        </div>
+        <div class="burger header__burger" id="burger">
+            <nav class="burger__menu">
+                <ul class="burger__column">
+                    <li class="burger__item"><a href="#visiting"><p>Visiting</p><p>></p></a></li>
+                    <li class="burger__item"><a href="#explore"><p>Explore</p><p>></p></a></li>
+                    <li class="burger__item"><a href="#video"><p>Video</p><p>></p></a></li>
+                    <li class="burger__item"><a href="#gallery"><p>Gallery</p><p>></p></a></li>
+                    <li class="burger__item"><a href="#tickets"><p>Tickets</p><p>></p></a></li>
+                    <li class="burger__item"><a href="#contacts"><p>Contacts</p><p>></p></a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main class="main">
@@ -37,8 +52,8 @@
         <section class="welcome section dark-section" id="welcome">
             <div class="welcome__container container slider">
                 <div class="welcome__content">
-                    <h2 class="section-title">Welcome</h2>
-                    <h1 class="section-title">To the Louvre</h1>
+                    <h2 class="section-title section-title-welcome">Welcome</h2>
+                    <h1 class="section-title section-title-welcome">To the Louvre</h1>
                     <p class="welcome__text">From the castle to the museum</p>
                     <div class="btn"><a href="tour1.html" target="_blank">Discover the Louvre</a></div>
                 </div>
@@ -56,12 +71,12 @@
                         <div class="slider__icon"></div>
                     </div>
                     <div class="slider__btn">
-                        <button class="slider__btn-prev slider__btn">
+                        <button class="slider__btn-prev">
                             <svg width="30" height="8" viewBox="0 0 30 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.72254 8C3.90173 6.31339 1.99422 5.08262 0 4.30769V3.69231C1.99422 2.89459 3.90173 1.66382 5.72254 0H7.23988C6.37283 1.4359 5.53468 2.52991 4.72543 3.28205H30V4.71795H4.72543C5.53468 5.47009 6.37283 6.5641 7.23988 8H5.72254Z" fill="white"/>
                             </svg>
                         </button>
-                        <button class="slider__btn-next slider__btn">
+                        <button class="slider__btn-next">
                             <svg width="30" height="8" viewBox="0 0 30 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24.2775 1.97284e-06C26.0983 1.68661 28.0058 2.91738 30 3.69231L30 4.30769C28.0058 5.10541 26.0983 6.33618 24.2775 8L22.7601 8C23.6272 6.5641 24.4653 5.47009 25.2746 4.71795L3.48964e-07 4.71795L5.01636e-07 3.28205L25.2746 3.28205C24.4653 2.52992 23.6272 1.4359 22.7601 1.86378e-06L24.2775 1.97284e-06Z" fill="white"/>
                             </svg>
@@ -89,7 +104,7 @@
                     </a>
                     <a  href="tour4.html" target="_blank" class="card">
                         <img src="./assets/img/Colonnade-Perrault.jpg" alt="Colonnade Perrault" class="card__img">
-                        <h3 class="card__title">Colonnade Perrault</h3>
+                        <h3 class="card__title card__title-2">Colonnade Perrault</h3>
                         <p class="card__subtitle">360° Virtual Tour</p>
                         <p class="card__text">Google Street Panorama View</p>
                     </a>
@@ -101,13 +116,13 @@
                     </a>
                     <a  href="tour6.html" target="_blank" class="card">
                         <img src="./assets/img/Mona-Lisa.jpg" alt="Mona Lisa" class="card__img">
-                        <h3 class="card__title">Mona Lisa</h3>
+                        <h3 class="card__title card__title-2">Mona Lisa</h3>
                         <p class="card__subtitle">360° Virtual Tour</p>
                         <p class="card__text">Google Street Panorama View</p>
                     </a>
                     <a  href="tour7.html" target="_blank" class="card">
                         <img src="./assets/img/Night-Palace.jpg" alt="Night Palace" class="card__img">
-                        <h3 class="card__title">Night Palace</h3>
+                        <h3 class="card__title card__title-2">Night Palace</h3>
                         <p class="card__subtitle">360° Virtual Tour</p>
                         <p class="card__text">Google Street Panorama View</p>
                     </a>
@@ -255,7 +270,10 @@
                                     <button class="amount__btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                                 </div>
                             </div>
-                            <p class="amount__total">Total €220</p>
+                            <div class="amount__total">
+                                <p>Total €</p>
+                                <p>220</p>
+                            </div>
                             <button class="amount__btn-buy">Buy Now</button>
                         </div>
                     </div>
@@ -274,6 +292,18 @@
                             <p class="booking__subtitle">Tour to Louvre</p>
                             <div class="booking__form">
                             </div>
+                            <form action="#" class="booking__contact">
+                                <input type="date" name="date">
+                                <input type="time" name="time">
+                                <input type="text" name="text">
+                                <input type="email" name="email">
+                                <input type="tel" name="tel">
+                                <select name="select">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </form>
                         </div>
                         <div class="booking__credit credit">
                             <div class="credit__content">
@@ -285,8 +315,11 @@
                                 </div>
                             </div>
                             <div class="credit__img">
-                                <img src="./assets/img/Rectangle 4.jpg" alt="louvre">
+                                <img src="./assets/img/Rectangle4.jpg" alt="louvre">
                             </div>
+                            <form action="#" class="booking__card">
+                                <input type="number" name="number">
+                            </form>
                         </div>
                     </div>
                     <button class="booking__btn-close">
@@ -316,7 +349,6 @@
                         </div>
                     </div>
                     <div class="contacts__map">
-                        <img src="./assets/img/map.png" alt="map">
                     </div>
                 </div>
             </div>
@@ -441,6 +473,7 @@
             </div>
         </footer>
     </main>
+    <script src="js/header.js"></script>
     <script src="js/tickets.js"></script>
     <script src="js/video.js"></script>
     <script src="js/gallery.js"></script>

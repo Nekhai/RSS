@@ -2,6 +2,12 @@
   &__player {
     position: relative;
   }
+  &__display {
+    max-width: 1440px;
+  }
+  &__display > img {
+    width: 100%;
+  }
   &__start {
     position: absolute;
     left: calc(50% - 110px);
@@ -135,5 +141,115 @@
       transition: 200ms;
       fill: #710707;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .video {
+    &__display {
+      max-width: 984px;
+    }
+    &__start {
+      left: calc(50% - 76px);
+      top: calc(50% - 76px);
+      width: 152px;
+      height: 152px;
+      border: 5px solid #ffffff;
+      &::after {
+        top: calc(50% - 40px);
+        left: calc(50% - 20px);
+        border: 40px solid transparent;
+        border-left: 60px solid #ffffff;
+      }
+    }
+    &__control {
+      height: 60px;
+      margin: 0 0 38px 0;
+    }
+    &__content {
+      padding: 0 0 40px 0;
+    }
+    &__text {
+      display: none;
+    }
+  }
+  .control {
+    padding: 0 40px;
+    &__progress {
+      height: 5px;
+      width: 564px;
+      &::-webkit-slider-thumb {
+        width: 13px;
+        height: 13px;
+      }
+    }
+    &__volume {
+      height: 5px;
+      width: 143px;
+      &::-webkit-slider-thumb {
+        width: 13px;
+        height: 13px;
+      }
+    }
+    &__btn-play > svg {
+      height: 30px;
+      width: 23px;
+    }
+    &__btn-mute > svg {
+      height: 20px;
+      width: 26px;
+    }
+    &__btn-screen > svg {
+      height: 26px;
+      width: 26px;
+    }
+  }
+  .list {
+    //   &__video {
+    //     display: flex;
+    //     justify-content: space-between;
+    //   }
+    &__item {
+      // position: relative;
+      // max-width: 452px;
+      // max-height: 254px;
+      // padding-bottom: 56.25%;
+      // height: 0;
+      // overflow: hidden;
+    }
+    &__item > iframe {
+      width: 300px;
+      height: 170px;
+      // position: absolute;
+    }
+    //   &__control {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     width: 200px;
+    //     height: 12px;
+    //     margin: 40px auto 0;
+    //   }
+    //   &__icon {
+    //     width: 12px;
+    //     height: 12px;
+    //     border-radius: 50%;
+    //     background: #999999;
+    //     margin: 0 0 3px 0;
+    //     &:hover {
+    //       cursor: pointer;
+    //       transition: 200ms;
+    //       background: #710707;
+    //     }
+    //   }
+    //   &__active {
+    //     background: #333333;
+    //   }
+    //   &__btn {
+    //     background: none;
+    //     &:hover svg > path {
+    //       transition: 200ms;
+    //       fill: #710707;
+    //     }
   }
 }

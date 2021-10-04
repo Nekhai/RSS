@@ -139,4 +139,51 @@
 .slider__active {
   background: #d2b183;
 }
+
+@media (max-width: 1024px) {
+  .welcome__container {
+    background: url(../assets/img/louvre.jpg) 100% 0/700px 525px no-repeat, #030303;
+  }
+  .welcome__content {
+    padding: 50px 0 192px 0;
+  }
+  .welcome__text {
+    padding: 25px 0 50px 0;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .btn {
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+  }
+  .btn > a {
+    padding: 20px 44px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .slider__control {
+    width: 700px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 75px 0 224px;
+  }
+  .slider__number {
+    font-size: 20px;
+    width: 71px;
+  }
+  .slider__icons {
+    width: 160px;
+  }
+  .slider__icon {
+    width: 12px;
+    height: 12px;
+  }
+  .section-title-welcome {
+    line-height: 90px;
+  }
+}
 /*# sourceMappingURL=welcome.css.map */

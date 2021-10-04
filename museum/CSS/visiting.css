@@ -4,6 +4,9 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 74px 60px;
   padding: 103px 0 0 0;
 }
@@ -13,14 +16,13 @@
 }
 
 .card:hover .card__title::after {
-  width: 440px;
+  width: 100%;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
 .card__img {
-  width: 440px;
-  height: 285px;
+  width: 100%;
 }
 
 .card__title {
@@ -57,5 +59,36 @@
   font-size: 18px;
   line-height: 21px;
   color: #000000;
+}
+
+@media (max-width: 1024px) {
+  .visiting__content {
+    gap: 60px 108px;
+    padding: 83px 0 0 0;
+  }
+  .card {
+    width: 330px;
+  }
+  .card__title {
+    font-size: 28px;
+    line-height: 31px;
+    letter-spacing: 5px;
+  }
+  .card__title::after {
+    width: 150px;
+  }
+  .card__subtitle {
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .card__text {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .card__title-2 {
+    letter-spacing: 3px;
+  }
 }
 /*# sourceMappingURL=visiting.css.map */

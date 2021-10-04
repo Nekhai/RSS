@@ -117,3 +117,18 @@ footer {
     background: #710707;
   }
 }
+
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 50px;
+    line-height: 75px;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .underline-title {
+    &::after {
+      bottom: -23px;
+    }
+  }
+}

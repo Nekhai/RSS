@@ -35,3 +35,34 @@
     z-index: 3;
   }
 }
+
+@media (max-width: 1024px) {
+  .explore {
+    &__container {
+      flex-direction: column;
+    }
+    &__text {
+      padding: 87px 2px 0 0;
+      & p {
+        padding: 0;
+        font-size: 20px;
+        line-height: 35px;
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+    &__img {
+      margin: 2px auto 0;
+    }
+    // &__pic {
+    //   position: absolute;
+    //   left: 0;
+    //   z-index: 2;
+    // }
+    // &__pic-mid {
+    //   position: absolute;
+    //   left: 422px;
+    //   z-index: 3;
+  }
+}
