@@ -125,7 +125,46 @@
   .social {
     align-self: center;
     padding: 13px 0 0 182px;
+  }
+}
+@media (max-width: 420px) {
+  .footer {
+    &__container {
+      padding: 0 0 40px 0;
+    }
+    &__left-wrap {
+      flex-direction: column;
+    }
+    &__sign {
+      // justify-content: space-between;
+      // align-items: center;
+      // height: 124px;
+      // margin: 0 auto;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__img {
+      margin: 0 20px 0 0;
+    }
+    &__school {
+      display: none;
+    }
+  }
+  .menu-footer {
+    padding: 14px 0 0 0;
+    &__item {
+      padding: 25px 88px 0 0;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  .social {
+    padding: 0;
+  }
+  .social {
     &__links {
+      margin: -15px 0 0 2px;
+      height: 48px;
     }
   }
 }

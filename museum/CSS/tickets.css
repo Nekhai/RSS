@@ -351,4 +351,46 @@
     height: 300px;
   }
 }
+
+@media (max-width: 420px) {
+  .tickets__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tickets__img {
+    width: 380px;
+    height: 160px;
+  }
+  .tickets__img > img {
+    margin: -17% 0;
+  }
+  .tickets__content {
+    padding: 0;
+  }
+  .amount__title {
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 40px 0 20px 0;
+  }
+  .amount__subtitle {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 0 0 15px 0;
+  }
+  .amount__block-basic {
+    padding: 0 0 20px 0;
+  }
+  .amount__total {
+    font-size: 16px;
+    line-height: 19px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 39px 0 40px 0;
+    letter-spacing: 0.5px;
+  }
+}
 /*# sourceMappingURL=tickets.css.map */

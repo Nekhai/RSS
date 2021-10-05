@@ -38,18 +38,6 @@
     width: 100%;
     height: 100%;
     background: none;
-    // &:hover &__burger {
-    //   background: #9d8665;
-    //   transition: 200ms;
-    //   &::before {
-    //     background: #9d8665;
-    //     transition: 200ms;
-    //   }
-    //   &::after {
-    //     background: #9d8665;
-    //     transition: 200ms;
-    //   }
-    // }
   }
 }
 .logo {
@@ -126,6 +114,9 @@
       }
     }
   }
+  &__content {
+    display: none;
+  }
 }
 .hideTitle {
   opacity: 0;
@@ -160,6 +151,103 @@
     }
     &__text {
       padding: 10px 0 0 0;
+    }
+  }
+  .burger {
+    position: absolute;
+    z-index: 10;
+    left: -2000px;
+    width: 100%;
+    height: 585px;
+    top: 100px;
+    background: #030303;
+    transition: 0.5s;
+    opacity: 0;
+    &__menu {
+      padding: 45px 0 10px 55px;
+    }
+    &__item {
+      padding: 0 0 25px 0;
+      & > a {
+        display: flex;
+        justify-content: space-between;
+        width: 122px;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 23px;
+        letter-spacing: 2px;
+        color: #ffffff;
+        &:hover {
+          color: #9d8665;
+          transition: 200ms;
+        }
+      }
+    }
+    &__content {
+      display: block;
+      background: #030303;
+    }
+    &__img {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 20px;
+      column-gap: 20px;
+      justify-content: center;
+    }
+    &__line {
+      width: 658px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      margin: 35px auto 0;
+    }
+    &__social-icons {
+      display: flex;
+      justify-content: center;
+      padding: 32px 23px 0 0;
+    }
+  }
+}
+@media (max-width: 420px) {
+  .header {
+    position: relative;
+    &__container {
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .logo {
+    &__img {
+      width: 29px;
+      height: 16px;
+      background: url(../assets/svg/Vector-2.svg) center no-repeat;
+    }
+    &__text {
+      padding: 0;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  .burger {
+    height: 525px;
+    &__menu {
+      padding: 25px 0 10px 55px;
+    }
+    &__img-wrap {
+      width: 95px;
+      height: 95px;
+      overflow: hidden;
+    }
+    &__img-wrap img {
+      height: 100%;
+    }
+    &__line {
+      width: 310px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      margin: 20px auto 0;
+    }
+    &__social {
+      padding: 5px 0 0 20px;
     }
   }
 }

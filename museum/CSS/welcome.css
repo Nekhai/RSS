@@ -215,4 +215,51 @@
     padding: 0 163px 0;
   }
 }
+
+@media (max-width: 420px) {
+  .section-title-welcome {
+    line-height: 40px;
+  }
+  .welcome__container {
+    background: url(../assets/img/1.jpg) 0 69%/100% auto no-repeat;
+  }
+  .welcome__content {
+    padding: 5px 0 0 0;
+  }
+  .welcome__content h1 {
+    padding: 0 0 0 4px;
+  }
+  .welcome__content h2 {
+    padding: 0 7px 0 0;
+  }
+  .welcome__text {
+    padding: 25px 0 415px 0;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .slider__control {
+    height: 80px;
+    padding: 0 75px;
+  }
+  .slider__number {
+    font-size: 16px;
+    width: 50px;
+  }
+  .slider__icons {
+    width: 75px;
+  }
+  .slider__icon {
+    width: 7px;
+    height: 7px;
+  }
+  .slider__btn {
+    width: 55px;
+  }
+  .slider__btn-next > svg {
+    width: 20px;
+  }
+  .slider__btn-prev > svg {
+    width: 20px;
+  }
+}
 /*# sourceMappingURL=welcome.css.map */

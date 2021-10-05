@@ -114,4 +114,20 @@
     line-height: 21px;
   }
 }
+
+@media (max-width: 420px) {
+  .visiting__content {
+    padding: 63px 0 0 0;
+  }
+  .card__title {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 5px;
+    padding: 23.5px 0 22px 0;
+  }
+  .card__subtitle {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
 /*# sourceMappingURL=visiting.css.map */

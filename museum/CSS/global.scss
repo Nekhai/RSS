@@ -141,3 +141,9 @@ footer {
     padding: 40px 0;
   }
 }
+@media (max-width: 420px) {
+  .section-title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}

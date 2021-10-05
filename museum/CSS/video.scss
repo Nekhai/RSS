@@ -268,3 +268,78 @@
     }
   }
 }
+@media (max-width: 420px) {
+  .video {
+    padding: 36px 0;
+    &__start {
+      left: calc(50% - 25px);
+      top: calc(50% - 25px);
+      width: 50px;
+      height: 50px;
+      border: 2px solid #ffffff;
+      &::after {
+        top: calc(50% - 15px);
+        left: calc(50% - 7px);
+        border: 14px solid transparent;
+        border-left: 21px solid #ffffff;
+      }
+    }
+    &__control {
+      height: 52px;
+      margin: 0 0 40px 0;
+    }
+  }
+  .control {
+    position: relative;
+    padding: 5px 16px 0 16px;
+    &__progress {
+      width: 100%;
+      position: absolute;
+      bottom: 48px;
+      left: 0;
+      height: 4px;
+      &::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    &__volume {
+      width: 200px;
+      height: 4px;
+      &::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    &__btn-play > svg {
+      height: 14px;
+      width: 18px;
+    }
+    &__btn-mute > svg {
+      height: 14px;
+      width: 18px;
+    }
+    &__btn-screen > svg {
+      height: 18px;
+      width: 18px;
+    }
+  }
+  .list {
+    padding: 0 0 3px 0;
+    &__item > iframe {
+      width: 180px;
+      height: 101px;
+    }
+    &__control {
+      width: 174px;
+      margin: 35px auto 0;
+    }
+    &__icon {
+      width: 8px;
+      height: 8px;
+    }
+    &__btn > svg {
+      height: 8px;
+    }
+  }
+}

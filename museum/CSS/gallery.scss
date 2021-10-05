@@ -78,3 +78,23 @@
     }
   }
 }
+@media (max-width: 420px) {
+  .gallery {
+    padding: 40px 0 0 0;
+    &__picture-container {
+      height: 637px;
+    }
+    &__content {
+      padding: 0 0 40px 0;
+    }
+    &__picture-inner-container {
+      height: 2700px;
+    }
+    &__picture-inner-container > img {
+      width: 178px;
+    }
+    &__blur {
+      height: 112px;
+    }
+  }
+}

@@ -40,7 +40,7 @@
 
 .explore__pic-mid {
   position: absolute;
-  left: 422px;
+  left: 58%;
   z-index: 3;
 }
 
@@ -72,21 +72,22 @@
     display: none;
   }
   .explore__img {
-    position: relative;
     width: 728px;
     height: 705px;
     margin: 0;
-    z-index: 1;
   }
-  .explore__pic {
-    position: absolute;
-    left: 0;
-    z-index: 2;
+}
+
+@media (max-width: 420px) {
+  .explore__container {
+    gap: 65px;
   }
-  .explore__pic-mid {
-    position: absolute;
-    left: 422px;
-    z-index: 3;
+  .explore__img {
+    width: 380px;
+    height: 368px;
+  }
+  .explore__img > img {
+    height: 100%;
   }
 }
 /*# sourceMappingURL=explore.css.map */

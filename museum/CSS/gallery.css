@@ -96,4 +96,25 @@
     height: 235px;
   }
 }
+
+@media (max-width: 420px) {
+  .gallery {
+    padding: 40px 0 0 0;
+  }
+  .gallery__picture-container {
+    height: 637px;
+  }
+  .gallery__content {
+    padding: 0 0 40px 0;
+  }
+  .gallery__picture-inner-container {
+    height: 2700px;
+  }
+  .gallery__picture-inner-container > img {
+    width: 178px;
+  }
+  .gallery__blur {
+    height: 112px;
+  }
+}
 /*# sourceMappingURL=gallery.css.map */

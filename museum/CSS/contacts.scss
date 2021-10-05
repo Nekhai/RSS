@@ -77,3 +77,23 @@
     }
   }
 }
+@media (max-width: 420px) {
+  .contacts {
+    &__content {
+      padding: 63px 0 0 0;
+    }
+    &__map {
+      width: 380px;
+      height: 248px;
+      background: url(../assets/img/map-2.png) 100% 0 no-repeat;
+    }
+    &__title {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}

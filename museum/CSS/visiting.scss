@@ -106,3 +106,22 @@
     }
   }
 }
+@media (max-width: 420px) {
+  .visiting {
+    &__content {
+      padding: 63px 0 0 0;
+    }
+  }
+  .card {
+    &__title {
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 5px;
+      padding: 23.5px 0 22px 0;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}
