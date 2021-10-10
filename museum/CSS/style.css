@@ -1098,15 +1098,16 @@ footer {
   }
 }
 
-.video__player {
+.video__display-wrap {
   position: relative;
+  min-height: 650px;
+  overflow: hidden;
+  height: calc(100% - 85px);
 }
 
 .video__display {
-  max-width: 1440px;
-}
-
-.video__display > img {
+  position: absolute;
+  top: -60px;
   width: 100%;
 }
 
@@ -1163,24 +1164,33 @@ footer {
   line-height: 38px;
 }
 
+.video__speed {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  color: #ffffff;
+  opacity: 0.5;
+  right: 5%;
+  bottom: 5%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 30px;
+}
+
 .control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 25px 0 30px;
 }
 
 .control__progress {
-  background: -webkit-gradient(linear, left top, right top, from(#710707), color-stop(54%, #710707), color-stop(54%, #fff), to(#fff));
-  background: linear-gradient(to right, #710707 0%, #710707 54%, #fff 54%, #fff 100%);
   height: 8px;
-  width: 929px;
+  width: 64%;
   outline: none;
   -webkit-transition: background 450ms ease-in;
   transition: background 450ms ease-in;
@@ -1200,7 +1210,7 @@ footer {
   background: -webkit-gradient(linear, left top, right top, from(#710707), color-stop(40%, #710707), color-stop(40%, #fff), to(#fff));
   background: linear-gradient(to right, #710707 0%, #710707 40%, #fff 40%, #fff 100%);
   height: 8px;
-  width: 155px;
+  width: 11%;
   outline: none;
   -webkit-transition: background 450ms ease-in;
   transition: background 450ms ease-in;
@@ -1217,6 +1227,8 @@ footer {
 }
 
 .btn-control {
+  width: 38px;
+  height: 36px;
   background: none;
 }
 
@@ -1228,12 +1240,16 @@ footer {
 }
 
 .list__video {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
+  gap: 42px;
+  height: 258px;
 }
 
 .list__control {
@@ -1278,6 +1294,10 @@ footer {
   -webkit-transition: 200ms;
   transition: 200ms;
   fill: #710707;
+}
+
+.list__item {
+  position: absolute;
 }
 
 @media (max-width: 1024px) {
