@@ -112,27 +112,22 @@ function changeIndecation() {
 
 bullets[0].addEventListener('click', function() {
   prevItem(1);
-  // removeActive();
   bullets[0].classList.add('slider__active');
 })
 bullets[1].addEventListener('click', function() {
   prevItem(2);
-  // removeActive();
   bullets[1].classList.add('slider__active');
 })
 bullets[2].addEventListener('click', function() {
   prevItem(3);
-  // removeActive();
   bullets[2].classList.add('slider__active');
 })
 bullets[3].addEventListener('click', function() {
   prevItem(4);
-  // removeActive();
   bullets[3].classList.add('slider__active');
 })
 bullets[4].addEventListener('click', function() {
   prevItem(5);
-  // removeActive();
   bullets[4].classList.add('slider__active');
 })
 
