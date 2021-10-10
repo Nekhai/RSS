@@ -165,18 +165,26 @@
                     <p class="welcome__text">From the castle to the museum</p>
                     <div class="btn"><a href="tour1.html" target="_blank">Discover the Louvre</a></div>
                 </div>
+                <div class="slider__container">
+                    <img src="./assets/img/1.jpg" alt="welcome-1" class="slider__item active">
+                    <img src="./assets/img/2.jpg" alt="welcome-2" class="slider__item">
+                    <img src="./assets/img/3.jpg" alt="welcome-3" class="slider__item">
+                    <img src="./assets/img/4.jpg" alt="welcome-4" class="slider__item">
+                    <img src="./assets/img/5.jpg" alt="welcome-5" class="slider__item">
+                </div>
+                <div class="slider__shadow"></div>
                 <div class="welcome__control slider__control">
                     <div class="slider__number">
-                        <div class="slider__current"><p>01</p></div>
+                        <div class="slider__current"><p id="currNumb">01</p></div>
                         <p>|</p>
                         <div class="slider__max"><p>05</p></div>
                     </div>
                     <div class="slider__icons">
-                        <div class="slider__icon slider__active"></div>
-                        <div class="slider__icon"></div>
-                        <div class="slider__icon"></div>
-                        <div class="slider__icon"></div>
-                        <div class="slider__icon"></div>
+                        <button class="slider__icon slider__active"></button>
+                        <button class="slider__icon"></button>
+                        <button class="slider__icon"></button>
+                        <button class="slider__icon"></button>
+                        <button class="slider__icon"></button>
                     </div>
                     <div class="slider__btn">
                         <button class="slider__btn-prev">
@@ -400,34 +408,96 @@
                             <p class="booking__subtitle">Tour to Louvre</p>
                             <div class="booking__form">
                             </div>
-                            <form action="#" class="booking__contact">
-                                <input type="date" name="date">
-                                <input type="time" name="time">
-                                <input type="text" name="text">
-                                <input type="email" name="email">
-                                <input type="tel" name="tel">
-                                <select name="select">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
+                            <form action="#" class="booking__contact inputs">
+                                <div class="inputs__date inputs__item">
+                                    <input type="date" name="date" value="Date">
+                                </div>
+                                <div class="inputs__time inputs__item">
+                                    <input type="time" name="time" value="Time">
+                                </div>
+                                <div class="inputs__name inputs__item">
+                                    <input type="text" name="text" value="Name">
+                                </div>
+                                <div class="inputs__email inputs__item">
+                                    <input type="email" name="email" value="E-mail">
+                                </div>
+                                <div class="inputs__tel inputs__item">
+                                    <input type="tel" name="tel" value="Phone">
+                                </div>
+                                <div class="inputs__select inputs__item">
+                                    <select name="select">
+                                        <option value="Ticket Type">Ticket Type</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                                <div class="inputs__amounts">
+                                    <div class="inputs__title">Entry ticket</div>
+                                    <div class="inputs__basic inputs__amount">
+                                        <p class="inputs__text">Basic 18+ (20 €)</p>
+                                        <div class="inputs__amount-number">
+                                            <button class="inputs__btn" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                                            <input type="number" min="0" max="20" value="2" readonly class="number">
+                                            <button class="inputs__btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="inputs__senior inputs__amount">
+                                        <p class="inputs__text">Senior 65+ (10 €)</p>
+                                        <div class="inputs__amount-number">
+                                            <button class="inputs__btn" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                                            <input type="number" min="0" max="20" value="2" readonly class="number">
+                                            <button class="inputs__btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                         <div class="booking__credit credit">
                             <div class="credit__content">
-                                <div class="credit__title">
-                                    <p>Overview</p>
+                                <div class="credit__text">
+                                    <div class="credit__title">
+                                        <p>Overview</p>
+                                    </div>
+                                    <div class="credit__subtitle">
+                                        <p>Tour to Louvre</p>
+                                    </div>
+                                    <div class="credit__date">
+                                        <p class="credit__date-day">Friday, August 19</p>
+                                        <p class="credit__date-time">16 : 30</p>
+                                        <p class="credit__date-type">Temporary exhibition</p>
+                                    </div>
                                 </div>
-                                <div class="credit__subtitle">
-                                    <p>Tour to Louvre</p>
+                                <div class="credit__img">
+                                    <img src="./assets/img/Rectangle4.jpg" alt="louvre">
                                 </div>
                             </div>
-                            <div class="credit__img">
-                                <img src="./assets/img/Rectangle4.jpg" alt="louvre">
+                            <div class="credit__price price">
+                                <div class="price__basic">
+                                    <div class="price__basic-one">
+                                        <div class="numb">2</div>
+                                        <p>Basic (20 €)</p>
+                                    </div>
+                                    <div class="price__basic-sum">40 €</div>
+                                </div>
+                                <div class="price__senior">
+                                    <div class="price__senior-one">
+                                        <div class="numb">2</div>
+                                        <p>Senior (10 €)</p>
+                                    </div>
+                                    <div class="price__senior-sum">20 €</div>
+                                </div>
+                                <div class="price__total">
+                                    <div class="price__total-one">Total:</div>
+                                    <div class="price__total-sum">60 €</div>
+                                </div>
                             </div>
-                            <form action="#" class="booking__card">
-                                <input type="number" name="number">
-                            </form>
+                            <div class="booking__card">
+                                <div class="booking__card-1"></div>
+                                <div class="booking__card-2"></div>
+                                <div class="booking__btn-wrap">
+                                    <button class="booking__btn">Book</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <button class="booking__btn-close">
@@ -461,6 +531,7 @@
                 </div>
             </div>
         </section>
+    </main>
         <!-- footer -->
         <footer class="footer section">
             <div class="footer__container container">
@@ -580,10 +651,10 @@
                 <a href="https://github.com/nekhai" target="_blank">Nekhai</a>
             </div>
         </footer>
-    </main>
     <script src="js/header.js"></script>
     <script src="js/tickets.js"></script>
     <script src="js/video.js"></script>
     <script src="js/gallery.js"></script>
+    <script src="js/welcome.js"></script>
 </body>
 </html>

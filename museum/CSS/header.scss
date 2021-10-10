@@ -12,6 +12,7 @@
     width: 32px;
     height: 2px;
     background: #ffffff;
+    transform: 200ms;
     &::before {
       content: "";
       position: absolute;
@@ -29,6 +30,18 @@
       width: 32px;
       height: 2px;
       background: #ffffff;
+    }
+  }
+  &__burger-active {
+    transform: 200ms;
+    background: #030303;
+    &::before {
+      transform: rotate(-45deg) translate(0px, -50%);
+      top: 50%;
+    }
+    &::after {
+      transform: rotate(45deg) translate(0px, 50%);
+      top: 50%;
     }
   }
   &__burger-btn {

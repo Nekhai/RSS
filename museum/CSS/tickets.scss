@@ -169,6 +169,7 @@
     line-height: 21px;
     color: #710707;
     position: relative;
+    margin: 0 0 72px 0;
     &::after {
       content: "";
       position: absolute;
@@ -180,11 +181,126 @@
       opacity: 0.9;
     }
   }
+  &__card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  &__card-1 {
+    position: absolute;
+    width: 360px;
+    height: 211px;
+    z-index: 3;
+    background: url(../assets/img/Group-71.jpg);
+  }
+  &__card-2 {
+    position: absolute;
+    width: 360px;
+    height: 211px;
+    z-index: 2;
+    background: url(../assets/img/Group-72.jpg);
+    right: 0;
+    top: 30px;
+  }
+  &__btn-wrap {
+    position: absolute;
+    top: 268px;
+    right: 0;
+  }
+  &__btn {
+    width: 220px;
+    height: 45px;
+    color: #ffffff;
+    background: #710707;
+    opacity: 0.9;
+    font-size: 22px;
+    line-height: 26px;
+    &:hover {
+      background: #9d8665;
+      transition: 200ms;
+    }
+  }
+}
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  &__item {
+    border: 1px solid #030303;
+    width: 400px;
+    height: 45px;
+    padding: 10px 11px 11px 45px;
+  }
+  &__item > input,
+  select {
+    width: 100%;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &__date {
+    width: 190px;
+    background: url(../assets/svg/date.svg) 15px 50% / auto auto no-repeat;
+  }
+  &__time {
+    width: 190px;
+    background: url(../assets/svg/time.svg) 15px 50% / auto auto no-repeat;
+  }
+  &__name {
+    background: url(../assets/svg/name.svg) 15px 50% / auto auto no-repeat;
+  }
+  &__email {
+    background: url(../assets/svg/email.svg) 15px 50% / auto auto no-repeat;
+  }
+  &__tel {
+    background: url(../assets/svg/tel.svg) 15px 50% / auto auto no-repeat;
+  }
+  &__select {
+    background: url(../assets/svg/ballot.svg) 15px 50% / auto auto no-repeat;
+  }
+  &__title {
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    color: #9d8665;
+    text-transform: capitalize;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #740c11;
+      opacity: 0.9;
+    }
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 21px;
+    color: #030303;
+  }
+  &__amounts {
+    width: 400px;
+    border: 1px solid #030303;
+    padding: 10px 15px 9px 15px;
+  }
+  &__amount {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__basic {
+    padding: 25px 0 0 0;
+  }
+  &__senior {
+    padding: 16px 0 0 0;
+  }
 }
 .credit {
   padding: 25px 30px 26px;
-  display: flex;
-  justify-content: space-between;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
   &__title {
     font-weight: 500;
     font-size: 32px;
@@ -197,6 +313,72 @@
     line-height: 26px;
     color: #740c11;
     opacity: 0.9;
+    padding: 3px 0 0 0;
+  }
+  &__date {
+    padding: 10px 0 0 0;
+    font-size: 18px;
+    line-height: 21px;
+    color: #030303;
+  }
+  &__date > p {
+    padding: 0 0 5px 30px;
+  }
+  &__date-day {
+    background: url(../assets/svg/date.svg) 0 3px no-repeat;
+  }
+  &__date-time {
+    background: url(../assets/svg/time.svg) 0 3px no-repeat;
+  }
+  &__date-type {
+    background: url(../assets/svg/check_circle_outline.svg) 0 3px no-repeat;
+  }
+}
+.numb {
+  width: 32px;
+  height: 20px;
+  border-radius: 5px;
+  background: #030303;
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+  color: #a4a4a3;
+  margin: 0 10px 0 0;
+}
+.price {
+  padding: 22px 0 8px 0;
+  &__basic,
+  &__senior,
+  &__total,
+  &__basic-one,
+  &__senior-one {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__basic {
+    padding: 0 0 10px 0;
+  }
+  &__senior {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #740c11;
+      opacity: 0.9;
+    }
+  }
+  &__total {
+    padding: 24px 0 0 0;
+    font-size: 32px;
+    line-height: 37px;
+    color: #030303;
+  }
+  &__total-sum {
+    font-weight: 500;
   }
 }
 .animation {

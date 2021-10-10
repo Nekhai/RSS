@@ -21,6 +21,8 @@
   width: 32px;
   height: 2px;
   background: #ffffff;
+  -webkit-transform: 200ms;
+          transform: 200ms;
 }
 
 .header__burger-wrap::before {
@@ -41,6 +43,24 @@
   width: 32px;
   height: 2px;
   background: #ffffff;
+}
+
+.header__burger-active {
+  -webkit-transform: 200ms;
+          transform: 200ms;
+  background: #030303;
+}
+
+.header__burger-active::before {
+  -webkit-transform: rotate(-45deg) translate(0px, -50%);
+          transform: rotate(-45deg) translate(0px, -50%);
+  top: 50%;
+}
+
+.header__burger-active::after {
+  -webkit-transform: rotate(45deg) translate(0px, 50%);
+          transform: rotate(45deg) translate(0px, 50%);
+  top: 50%;
 }
 
 .header__burger-btn {
