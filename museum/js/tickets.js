@@ -45,10 +45,6 @@ function countPrice() {
 
 changeTotalPrice.forEach(
   function(n) {
-    console.log(ticketPrice)
     n.addEventListener('click', countPrice);
   }
 )
-
-// changeTotalPrice.addEventListener('click', countPrice);
-

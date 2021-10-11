@@ -29,9 +29,16 @@
     bottom: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
   }
-}
-.gallery-img-padding {
-  padding: 50px 0 0 0;
+  &__img-padding {
+    padding: 50px 0 0 0;
+  }
+  &__img {
+    transition: all 1s;
+    transform: translateY(50px);
+  }
+  &__img-active {
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 1024px) {
