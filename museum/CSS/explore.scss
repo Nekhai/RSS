@@ -17,22 +17,32 @@
       }
     }
   }
-  &__img {
+  &__img-container {
     position: relative;
     width: 720px;
     height: 700px;
-    margin: 15px 0 0 0;
-    z-index: 1;
+    flex-shrink: 0;
+  }
+  &__img {
+    position: absolute;
+    height: auto;
+    width: auto;
+    overflow: hidden;
   }
   &__pic {
-    position: absolute;
-    left: 0;
-    z-index: 2;
+    display: block;
   }
   &__pic-mid {
     position: absolute;
-    left: 58%;
-    z-index: 3;
+    left: calc(60% - 20px);
+    z-index: 9;
+    cursor: ew-resize;
+    width: 40px;
+    height: 100%;
+    background: url(../assets/img/explore-slider.png);
+  }
+  &__cover {
+    width: 60%;
   }
 }
 
