@@ -347,15 +347,15 @@
                             <h4 class="type__title">Ticket Type</h4>
                             <div class="type__input">
                                 <div class="type__radio-btn">
-                                    <input type="radio" checked="checked" id="ticket-choice1" name="ticket">
+                                    <input type="radio" checked="checked" id="ticket-choice1" class="change-total-price" onchange="checkTicketPrice()" name="ticket">
                                     <label for="ticket-choice1" class="type__text">Permanent exhibition</label>
                                 </div>
                                 <div class="type__radio-btn">
-                                    <input type="radio" id="ticket-choice2" name="ticket">
+                                    <input type="radio" id="ticket-choice2" class="change-total-price" onchange="checkTicketPrice()" name="ticket">
                                     <label for="ticket-choice2" class="type__text">Temporary exhibition</label>
                                 </div>
                                 <div class="type__radio-btn">
-                                    <input type="radio" id="ticket-choice3" name="ticket">
+                                    <input type="radio" id="ticket-choice3" class="change-total-price" onchange="checkTicketPrice()" name="ticket">
                                     <label for="ticket-choice3" class="type__text">Combined Admission</label>
                                 </div>
                             </div>
@@ -365,22 +365,22 @@
                             <div class="amount__block-basic">
                                 <p class="amount__subtitle">Basic 18+</p>
                                 <div class="amount__number">
-                                    <button class="amount__btn" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                                    <input type="number" min="0" max="20" value="1" readonly class="number">
-                                    <button class="amount__btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                    <button class="amount__btn change-total-price" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                                    <input type="number" min="0" max="20" value="1" id="basic-amount" readonly class="number">
+                                    <button class="amount__btn change-total-price" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                                 </div>
                             </div>
                             <div class="amount__block-senior">
                                 <p class="amount__subtitle">Senior 65+</p>
                                 <div class="amount__number">
-                                    <button class="amount__btn" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                                    <input type="number" min="0" max="20" value="1" readonly class="number">
-                                    <button class="amount__btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                    <button class="amount__btn change-total-price" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                                    <input type="number" min="0" max="20" value="1" id="senior-amount" readonly class="number">
+                                    <button class="amount__btn change-total-price" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                                 </div>
                             </div>
                             <div class="amount__total">
                                 <p>Total €</p>
-                                <p>220</p>
+                                <p id="total-amount">30</p>
                             </div>
                             <button class="amount__btn-buy">Buy Now</button>
                         </div>
