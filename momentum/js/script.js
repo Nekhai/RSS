@@ -1,6 +1,6 @@
 const time = document.querySelector('.time');
 const screenDate = document.querySelector('.date');
-const options = {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'UTC'};
+const options = {weekday: 'long', month: 'long', day: 'numeric'};
 
 
 function showDate() {
@@ -9,7 +9,7 @@ function showDate() {
   const currentTime = date.toLocaleTimeString();
   screenDate.textContent = currentDate;
   time.textContent = currentTime;
-  
+
   setTimeout(showDate, 1000)
 }
 
