@@ -147,3 +147,22 @@ window.addEventListener('load', getCityLocalStorage);
 window.addEventListener('beforeunload', setCityLocalStorage);
 city.addEventListener('change', getWeather);
 
+// quotes
+const changeQuote = document.querySelector('.change-quote');
+const quote = document.querySelector('.quote');
+const author = document.querySelector('.author');
+
+async function getQuotes() {  
+  const quotes = 'data.json';
+  const res = await fetch(quotes);
+  const data = await res.json(); 
+
+  let quoteNum = Math.ceil(Math.random() * (data.length - 1));
+
+  quote.textContent = data[quoteNum].quote;
+  author.textContent = data[quoteNum].author;
+}
+
+changeQuote.addEventListener('click', getQuotes);
+
+getQuotes();
