@@ -81,7 +81,6 @@ function setBg() {
   img.onload = () => {      
     body.style.backgroundImage = `url('https://raw.githubusercontent.com/nekhai/stage1-tasks/assets/images/${textGreeting}/${bgNum}.jpg')`;
   }; 
-  // body.style.backgroundImage = `url('https://raw.githubusercontent.com/nekhai/stage1-tasks/assets/images/${textGreeting}/${bgNum}.jpg')`;
 }
 
 function getSlideNext() {
@@ -101,5 +100,50 @@ function getSlidePrev() {
   setBg();
 }
 
+// weather
+const weatherIcon = document.querySelector('.weather-icon');
+const temperature = document.querySelector('.temperature');
+const weatherDescription = document.querySelector('.weather-description');
+const city = document.querySelector('.city');
+const wind = document.querySelector('.wind');
+const humidity = document.querySelector('.humidity');
+city.value = 'Minsk';
+const weatherError = document.querySelector('.weather-error');
 
+async function getWeather() {  
+  weatherError.textContent = '';
+  try {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=863302701d9f6f247fdcd9f107f23dd9&units=metric`;
+    const res = await fetch(url);
+    const data = await res.json(); 
+
+
+  weatherIcon.className = 'weather-icon owf'
+  weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+  temperature.textContent = `${Math.round(data.main.temp)}°C`;
+  weatherDescription.textContent = data.weather[0].description;
+  wind.textContent = `Winde speed: ${Math.round(data.wind.speed)} m/s`;
+  humidity.textContent = `Humidity: ${Math.round(data.main.humidity)} %`;
+} catch (err) {
+  weatherError.textContent = "Error, city don't exist";
+  temperature.textContent = '';
+  weatherDescription.textContent = '';
+  wind.textContent = '';
+  humidity.textContent = '';
+}
+}
+
+function setCityLocalStorage() {
+  localStorage.setItem('city', city.value)
+}
+function getCityLocalStorage() {
+  if (localStorage.getItem('city')) {
+    city.value = localStorage.getItem('city');
+  }
+  getWeather()
+}
+
+window.addEventListener('load', getCityLocalStorage);
+window.addEventListener('beforeunload', setCityLocalStorage);
+city.addEventListener('change', getWeather);
 
