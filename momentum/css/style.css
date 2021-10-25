@@ -16,7 +16,6 @@ body {
   font-size: 16px;
   color: #fff;
   text-align: center;
-  /* background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5); */
   background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
 }
@@ -35,33 +34,59 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* width: 120px; */
   margin-bottom: 28px;
+}
+
+.player-buttons {
+  display: flex;
+  align-items: center;
+  width: 120px;
+  justify-content: space-between;
+}
+
+.player {
+  width: 700px;
+}
+
+.custom-player {
+  width: 100%;
+  max-width: 550px;
 }
 
 .control-progress {
   height: 8px;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
+  cursor: pointer;
 }
 
 .control-progress::-webkit-slider-thumb {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width: 0px;
+  height: 0px;
   -webkit-appearance: none;
-  cursor: ew-resize;
   background: #ffffff;
 }
 
 .control-volume {
   height: 8px;
-  width: 65px;
+  max-width: 65px;
+  width: 40%;
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
+}
+
+.bars {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.control-volume::-webkit-slider-thumb {
+  cursor: ew-resize;
 }
 
 .play-list {
