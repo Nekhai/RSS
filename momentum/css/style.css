@@ -364,6 +364,7 @@ body {
   bottom: 30px;
   border: none;
   cursor: pointer;
+  background: url("../assets/svg/set.svg");
 }
 .close-menu {
   width: 30px;
