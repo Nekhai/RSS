@@ -1,3 +1,9 @@
+let state = {
+  language: 'en',
+  photoSource: 'github',
+  blocks: ['time', 'date','greeting', 'quote', 'weather', 'audio', 'todolist']
+}
+
 // date
 const time = document.querySelector('.time');
 const screenDate = document.querySelector('.date');
@@ -5,7 +11,13 @@ const options = {weekday: 'long', month: 'long', day: 'numeric'};
 
 function setDate() {
   const date = new Date();
-  const currentDate = date.toLocaleDateString('en-Us', options);
+  let currentDate;
+  if (state.language === 'en') {
+    currentDate = date.toLocaleDateString('en-Us', options);
+  } else {
+    currentDate = date.toLocaleDateString('ru-Ru', options);
+  }
+
   screenDate.textContent = currentDate;
 }
 
@@ -23,12 +35,13 @@ function showAll() {
 }
 
 // hello
-const gretting = document.querySelector('.greeting');
+const greeting = document.querySelector('.greeting');
 let textGreeting;
+let textGreetingRu;
 function showGreeting() {
   const date = new Date();
   const hours = date.getHours();
-
+  
   if (hours < 6) {
     textGreeting = 'night';
   } else if (hours < 12) {
@@ -38,7 +51,22 @@ function showGreeting() {
   } else {
     textGreeting = 'evening';
   }
-  gretting.textContent = `Good ${textGreeting}`;
+
+  if (hours < 6) {
+    textGreetingRu = 'Доброе утро';
+  } else if (hours < 12) {
+    textGreetingRu = 'Доброе утро';
+  } else if (hours < 18) {
+    textGreetingRu = 'Добрый день';
+  } else {
+    textGreetingRu = 'Добрый вечер';
+  }
+
+  if (state.language === 'en') {
+    greeting.textContent = `Good ${textGreeting}`;
+  } else {
+    greeting.textContent = textGreetingRu;
+  }
 }
 
 let currentName = document.querySelector('.name');
@@ -113,7 +141,7 @@ const weatherError = document.querySelector('.weather-error');
 async function getWeather() {  
   weatherError.textContent = '';
   try {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=863302701d9f6f247fdcd9f107f23dd9&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=${state.language}&appid=863302701d9f6f247fdcd9f107f23dd9&units=metric`;
     const res = await fetch(url);
     const data = await res.json(); 
 
@@ -122,8 +150,14 @@ async function getWeather() {
   weatherIcon.classList.add(`owf-${data.weather[0].id}`);
   temperature.textContent = `${Math.round(data.main.temp)}°C`;
   weatherDescription.textContent = data.weather[0].description;
-  wind.textContent = `Winde speed: ${Math.round(data.wind.speed)} m/s`;
-  humidity.textContent = `Humidity: ${Math.round(data.main.humidity)} %`;
+  if (state.language === 'en') {
+    wind.textContent = `Winde speed: ${Math.round(data.wind.speed)} m/s`;
+    humidity.textContent = `Humidity: ${Math.round(data.main.humidity)} %`;
+  } else {
+    wind.textContent = `Скорость ветра: ${Math.round(data.wind.speed)} м/с`;
+    humidity.textContent = `Влажность: ${Math.round(data.main.humidity)} %`;
+  }
+
 } catch (err) {
   weatherError.textContent = "Error, city don't exist";
   temperature.textContent = '';
@@ -167,6 +201,7 @@ changeQuote.addEventListener('click', getQuotes);
 getQuotes();
 
 // audio
+const player = document.querySelector('.player');
 const btnPlay = document.querySelector('.play');
 const btnPlayNext = document.querySelector('.play-next');
 const btnPlayPrev = document.querySelector('.play-prev');
@@ -178,7 +213,7 @@ const playListContainer = document.querySelector('.play-list');
 btnPlay.addEventListener('click', playAudio);
 btnPlayNext.addEventListener('click', playNext);
 btnPlayPrev.addEventListener('click', playPrev);
-body.addEventListener('keydown', function(event) {
+player.addEventListener('keydown', function(event) {
   event.preventDefault();
 })
 let currentAudioTime = '0';
@@ -342,4 +377,128 @@ progress.addEventListener('click', changeProgress);
 audio.addEventListener('timeupdate', changProgressBg);
 audio.addEventListener('timeupdate', changeAudioDuration);
 btnMute.addEventListener('click', muteVolume);
+
+// setting
+const menu = document.querySelector('.menu');
+const closeMenu =document.querySelector('.close-menu');
+const setting = document.querySelector('.setting');
+const inputTime = document.querySelector('#time');
+const inputDate = document.querySelector('#date');
+const inputGreeting = document.querySelector('#greeting');
+const inputQuotes = document.querySelector('#quotes');
+const inputWeather = document.querySelector('#weather');
+const inputAudio = document.querySelector('#audio-player');
+const greetingContainer = document.querySelector('.greeting-container')
+const weather = document.querySelector('.weather');
+const quoteWrap = document.querySelector('.quote-wrap');
+
+inputTime.addEventListener('change', function() {
+  if (!this.checked) {
+    time.classList.add('hide');
+    time.classList.remove('show');
+    delete state.blocks[0];
+
+  } else {
+    time.classList.add('show')
+    time.classList.remove('hide');
+    state.blocks[0] = 'time';
+    console.log(state.blocks[0])
+  }
+});
+inputDate.addEventListener('change', function() {
+  if (!this.checked) {
+    screenDate.classList.add('hide');
+    screenDate.classList.remove('show');
+  } else {
+    screenDate.classList.add('show')
+    screenDate.classList.remove('hide');
+  }
+});
+inputGreeting.addEventListener('change', function() {
+  if (!this.checked) {
+    greetingContainer.classList.add('hide');
+    greetingContainer.classList.remove('show');
+  } else {
+    greetingContainer.classList.add('show')
+    greetingContainer.classList.remove('hide');
+  }
+});
+inputQuotes.addEventListener('change', function() {
+  if (!this.checked) {
+    quoteWrap.classList.add('hide');
+    quoteWrap.classList.remove('show');
+    changeQuote.classList.add('hide');
+    changeQuote.classList.remove('show');
+  } else {
+    quoteWrap.classList.add('show')
+    quoteWrap.classList.remove('hide');
+    changeQuote.classList.add('show')
+    changeQuote.classList.remove('hide');
+  }
+});
+inputWeather.addEventListener('change', function() {
+  if (!this.checked) {
+    weather.classList.add('hide');
+    weather.classList.remove('show');
+  } else {
+    weather.classList.add('show')
+    weather.classList.remove('hide');
+  }
+});
+inputAudio.addEventListener('change', function() {
+  if (!this.checked) {
+    player.classList.add('hide');
+    player.classList.remove('show');
+  } else {
+    player.classList.add('show')
+    player.classList.remove('hide');
+  }
+});
+
+function showMenu() {
+  setting.classList.toggle('show-menu');
+  menu.classList.toggle('hide-btn');
+}
+
+menu.addEventListener('click', showMenu);
+closeMenu.addEventListener('click', showMenu);
+
+// function setSettingLocalStorage() {
+//   localStorage.setItem('setting', state.blocks[0])
+// }
+// function getSettingLocalStorage() {
+//   if (localStorage.getItem('setting')) {
+//     state.blocks[0] = localStorage.getItem('setting');
+//     hideBlock();
+//   }
+// }
+
+// function hideBlock() {
+//   if (!state.blocks[0]) {
+//     time.classList.add('hide');
+//     time.classList.remove('show');
+//   }
+// }
+
+// window.addEventListener('load', getSettingLocalStorage);
+// window.addEventListener('beforeunload', setSettingLocalStorage);
+
+// console.log(state.blocks[0])
+
+
+// language
+const languages = document.querySelectorAll('[name="language"]');
+
+function changeLang() {
+  if (languages[0].checked) {
+    state.language = 'en';
+  } else {
+    state.language = 'ru';  
+  }
+  getWeather()
+}
+
+languages.forEach(el => el.addEventListener('change', changeLang))
+// console.log(state.language)
+
 
