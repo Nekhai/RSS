@@ -164,5 +164,111 @@ async function getQuotes() {
 }
 
 changeQuote.addEventListener('click', getQuotes);
-
 getQuotes();
+
+// audio
+const btnPlay = document.querySelector('.play');
+const btnPlayNext = document.querySelector('.play-next');
+const btnPlayPrev = document.querySelector('.play-prev');
+const audio = new Audio();
+let isPlay = false;
+let playNum = 0;
+const playListContainer = document.querySelector('.play-list');
+
+btnPlay.addEventListener('click', playAudio);
+btnPlayNext.addEventListener('click', playNext);
+btnPlayPrev.addEventListener('click', playPrev);
+body.addEventListener('keydown', function(event) {
+  event.preventDefault();
+})
+audio.addEventListener('ended', playNext);
+
+function playAudio() {
+  audio.src = playList[playNum].src;
+  audio.currentTime = 0;
+  if (!isPlay) {
+    audio.play();
+    isPlay = true;
+    toggleBtn();
+    playItems[playNum].classList.add('item-active');
+  } else {
+    audio.pause();
+    isPlay = false;
+    toggleBtn();
+  }
+}
+
+function toggleBtn() {
+  btnPlay.classList.toggle('pause');
+}
+
+function playNext() {
+  if (playNum === playList.length - 1) {
+    playNum = 0;
+    isPlay = false;
+    removeActieClass();
+    playAudio();
+  } else {
+    playNum++;
+    isPlay = false;
+    removeActieClass();
+    playAudio();
+  }
+}
+function playPrev() {
+  if (playNum === 0) {
+    playNum = playList.length - 1;
+    isPlay = false;
+    removeActieClass();
+    playAudio();
+  } else {
+    playNum--;
+    isPlay = false;
+    removeActieClass();
+    playAudio();
+  }
+}
+function removeActieClass() {
+  playItems.forEach(el => {
+    el.classList.remove('item-active');
+  })
+}
+
+function addListTitle(el) {
+  const li = document.createElement('li');
+  li.classList.add('play-item');
+  li.textContent = el.title;
+  playListContainer.append(li);
+}
+
+// import playList from './playList.js';
+const playList = [
+  {      
+    title: 'Aqua Caelestis',
+    src: './assets/sounds/Aqua Caelestis.mp3',
+    duration: '00:58'
+  },  
+  {      
+    title: 'River Flows In You',
+    src: './assets/sounds/River Flows In You.mp3',
+    duration: '03:50'
+  },
+  {      
+    title: 'Ennio Morricone',
+    src: './assets/sounds/Ennio Morricone.mp3',
+    duration: '01:37'
+  },  
+  {      
+    title: 'Summer Wind',
+    src: './assets/sounds/Summer Wind.mp3',
+    duration: '01:50'
+  }
+]
+// 
+
+playList.forEach(el => {
+  addListTitle(el);
+})
+
+const playItems = document.querySelectorAll('.play-item')
+
