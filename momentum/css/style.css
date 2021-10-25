@@ -35,8 +35,33 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 120px;
+  /* width: 120px; */
   margin-bottom: 28px;
+}
+
+.control-progress {
+  height: 8px;
+  width: 300px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.control-progress::-webkit-slider-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #ffffff;
+}
+
+.control-volume {
+  height: 8px;
+  width: 65px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
 }
 
 .play-list {

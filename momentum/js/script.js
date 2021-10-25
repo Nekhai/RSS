@@ -272,3 +272,44 @@ playList.forEach(el => {
 
 const playItems = document.querySelectorAll('.play-item')
 
+// custom audio
+const progress = document.querySelector('.control-progress');
+const volume = document.querySelector('.control-volume');
+
+function changeVolume() {
+  audio.volume = this.value;
+  audio.value = this.value * 100;
+  // volume.style.background = `linear-gradient(to right, #710707 0%, #710707 ${video.value}%, #fff ${video.value}%, white 100%)`
+  // if (volume.value === '0') {
+  //   btnMute.style.background = 'url(./assets/svg/mute.svg) no-repeat';
+  // } else {
+  //   btnMute.style.background = 'url(./assets/svg/volume.svg) no-repeat';
+  // }
+}
+
+function videoProgress() {
+  progress.value = (audio.currentTime / audio.duration) * 100;
+  progress.style.background = `linear-gradient(to right, #710707 0%, #710707 ${progress.value}%, #fff ${progress.value}%, white 100%)`
+  // if (progress.value === '100') {
+  //   btnPlay.style.background = 'url(./assets/svg/pause.svg) no-repeat';
+  // } 
+}
+
+function changeProgress(e) {
+  const scrubTime = (e.offsetX / progress.offsetWidth) * audio.duration;
+  audio.currentTime = scrubTime;
+}
+
+// function muteVolume() {
+//   if (audio.muted === false) {
+//     audio.muted = true;
+//     btnMute.style.background = 'url(./assets/svg/mute.svg) no-repeat';
+//   } else {
+//     audio.muted = false;
+//     btnMute.style.background = 'url(./assets/svg/volume.svg) no-repeat';
+//   }
+// }
+
+volume.addEventListener('change', changeVolume);
+progress.addEventListener('click', changeProgress);
+// progress.addEventListener('click', videoProgress);
