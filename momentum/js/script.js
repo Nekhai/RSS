@@ -181,24 +181,24 @@ btnPlayPrev.addEventListener('click', playPrev);
 body.addEventListener('keydown', function(event) {
   event.preventDefault();
 })
-let currentAudioTime = 0;
+let currentAudioTime = '0';
 
 audio.addEventListener('ended', playNext);
 
 function playAudio() {
-  currentAudioTime = audio.currentTime;
+  // currentAudioTime = audio.currentTime;
   audio.src = playList[playNum].src;
-  // audio.currentTime = 0;
+  // audio.currentTime = '0';
   if (!isPlay) {
-    audio.currentTime = currentAudioTime;
-    console.log(audio.currentTime)
+    // audio.currentTime = currentAudioTime;
+    // console.log(audio.currentTime)
     audio.play();
     isPlay = true;
     toggleBtn();
     playItems[playNum].classList.add('item-active');
   } else {
-    currentAudioTime = audio.currentTime;
-    console.log(audio.currentTime)
+    // currentAudioTime = audio.currentTime;
+    // console.log(audio.currentTime)
     audio.pause();
     isPlay = false;
     toggleBtn();
@@ -212,37 +212,31 @@ function toggleBtn() {
 function playNext() {
   if (playNum === playList.length - 1) {
     playNum = 0;
-    isPlay = false;
-    changeAudioTitle()
-    removeActiveClass();
-    playAudio();
   } else {
     playNum++;
-    isPlay = false;
-    changeAudioTitle()
-    removeActiveClass();
-    playAudio();
   }
+  changeAudio();
 }
 function playPrev() {
   if (playNum === 0) {
     playNum = playList.length - 1;
-    isPlay = false;
-    changeAudioTitle()
-    removeActiveClass();
-    playAudio();
   } else {
     playNum--;
-    isPlay = false;
-    changeAudioTitle()
-    removeActiveClass();
-    playAudio();
   }
+  changeAudio();
+}
+
+function changeAudio() {
+  isPlay = false;
+  changeAudioTitle();
+  removeActiveClass();
+  playAudio();
 }
 
 function removeActiveClass() {
   playItems.forEach(el => {
     el.classList.remove('item-active');
+    btnPlay.classList.remove('pause');
   })
 }
 
@@ -289,8 +283,9 @@ const progress = document.querySelector('.control-progress');
 const volume = document.querySelector('.control-volume');
 const audioTitle = document.querySelector('.current-audio');
 const audioDuration = document.querySelector('.audio-duration');
+const btnMute = document.querySelector('.unmute');
 changeAudioTitle();
-changeAudioDuration()
+changeAudioDuration();
 
 function changeAudioTitle() {
   audioTitle.textContent = `${playNum + 1}. ${playList[playNum].title}`;
@@ -315,6 +310,11 @@ function formatTime(seconds) {
 function changeVolume() {
   audio.volume = volume.value;
   // audio.value = this.value * 100;
+  if (volume.value === '0') {
+    btnMute.classList.add('mute');
+  } else {
+    btnMute.classList.remove('mute');
+  }
 }
 
 function changProgressBg() {
@@ -327,18 +327,19 @@ function changeProgress(e) {
   audio.currentTime = scrubTime;
 }
 
-// function muteVolume() {
-//   if (audio.muted === false) {
-//     audio.muted = true;
-//     btnMute.style.background = 'url(./assets/svg/mute.svg) no-repeat';
-//   } else {
-//     audio.muted = false;
-//     btnMute.style.background = 'url(./assets/svg/volume.svg) no-repeat';
-//   }
-// }
+function muteVolume() {
+  if (audio.muted === false) {
+    audio.muted = true;
+    btnMute.classList.add('mute');
+  } else {
+    audio.muted = false;
+    btnMute.classList.remove('mute');
+  }
+}
 
 volume.addEventListener('change', changeVolume);
 progress.addEventListener('click', changeProgress);
 audio.addEventListener('timeupdate', changProgressBg);
 audio.addEventListener('timeupdate', changeAudioDuration);
+btnMute.addEventListener('click', muteVolume);
 
