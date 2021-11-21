@@ -1,11 +1,9 @@
+import FooterHtml from './Footer.html';
 export class Footer {
   constructor() {}
 
   async render () {
-    const FooterElement = `
-    <h1>Footer</h1>
-    `
-    return FooterElement;
+    return FooterHtml;
   }
 
   async after_render () {};
