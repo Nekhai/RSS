@@ -1,0 +1,18 @@
+.header {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  padding: 70px 70px 0 0;
+  &__btn {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: url(../../assets/svg/carbon_settings.svg);
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

@@ -1,11 +1,9 @@
+import HeaderHtml from './Header.html';
 export class Header {
   constructor() {}
 
   async render () {
-    const FooterElement = `
-    <h1>Header</h1>
-    `
-    return FooterElement;
+    return HeaderHtml;
   }
 
   async after_render () {};
