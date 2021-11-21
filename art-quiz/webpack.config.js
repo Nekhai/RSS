@@ -89,7 +89,11 @@ module.exports = ({ development }) => {
         {
           test: /\.s[ac]ss$/i,
           use: [{loader: MiniCssExtractPlugin.loader, options: { publicPath: '../' }}, 'css-loader', 'sass-loader']
-        }
+        },
+        {
+          test: /\.html$/i,
+          loader: "html-loader",
+        },
       ],
     },
     plugins: [

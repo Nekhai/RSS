@@ -1,0 +1,42 @@
+.home {
+  height: 100%;
+  background: url(../../assets/img/j-retrato-de-cardenal-rafael.jpg) 0 0/100%
+    auto no-repeat;
+  &__logo {
+    width: 440px;
+    height: 512px;
+    margin: 0 auto;
+    background: url(../../assets/svg/main_logo.svg) 0 100% no-repeat;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    padding: 165px 0 0 0;
+  }
+  &__btn {
+  }
+}
+.main {
+  &__btn {
+    width: 287px;
+    height: 62px;
+    border: 1.5px solid #ffffff;
+    border-radius: 60px;
+    margin: 0 20px;
+    background: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -1.14766px;
+    &:hover {
+      background-color: #ffffff;
+      color: #010101;
+    }
+    &:active {
+      background: #ffbca2;
+      border-color: #ffbca2;
+    }
+  }
+}

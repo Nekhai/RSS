@@ -1,10 +1,9 @@
+import HomeHtml from './Home.html';
 export class Home {
   constructor() {}
 
   async render () {
-    return `
-    <h1>Home</h1>
-    `;
+    return HomeHtml;
   }
 
   async after_render () {};
