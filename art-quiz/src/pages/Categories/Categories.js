@@ -1,13 +1,20 @@
+import CategoriesPicHtml from './CategoriesPic.html'
+import CategoriesArtHtml from './CategoriesArt.html'
 export class Categories {
   constructor() {}
-
   async render () {
-    const CategoriesElement = `
-    <h1>Categories</h1>
-    `;
-
-    return CategoriesElement;
+    if (localStorage.categories === 'artist') {
+      return CategoriesArtHtml;
+    } else {
+      return CategoriesPicHtml;
+    }
   }
 
-  async after_render () {};
+  async after_render () {
+    const btnCategories = document.querySelector('.categories__btn');
+
+    btnCategories.addEventListener('click', () => {
+      window.location.hash = '/';
+    })
+  };
 }

@@ -1,0 +1,65 @@
+.categories {
+  padding: 30px 70px;
+  &__nav {
+    display: flex;
+  }
+  &__logo {
+    width: 166px;
+    height: 62px;
+    background: url(../../assets/img/Quiz-logo.png);
+  }
+  &__btn {
+    width: 59px;
+    height: 18px;
+    margin: 22px 89px 0 120px;
+    border: none;
+    background: none;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 18px;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    &:hover {
+      font-weight: bold;
+      color: #ffbca2;
+      transition: 0.5s;
+    }
+  }
+  &__location {
+    padding: 22px 0 0;
+    font-size: 22px;
+    line-height: 18px;
+    letter-spacing: -0.5px;
+    font-weight: bold;
+    color: #ffbca2;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 48px 26px;
+    padding: 125px 0 0 0;
+  }
+  &__item {
+    max-width: 195px;
+    max-height: 239px;
+    cursor: pointer;
+  }
+  &__text {
+  }
+  &__title {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.62766px;
+  }
+  &__count {
+  }
+  &__img {
+    padding: 10px 0 0 0;
+  }
+  &__img img {
+    max-width: 195px;
+    border-radius: 20px;
+    filter: grayscale(100%);
+  }
+}
