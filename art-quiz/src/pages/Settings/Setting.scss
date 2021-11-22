@@ -1,0 +1,39 @@
+.setting {
+  padding: 43px 70px 0;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text {
+    display: flex;
+  }
+  &__btn-back {
+    width: 34px;
+    height: 34px;
+    border: none;
+    background: url(../../assets/svg/Vector.svg) no-repeat;
+    cursor: pointer;
+  }
+  &__btn {
+    margin: 5px 0 0 0;
+    &:hover {
+      opacity: 0.6;
+      transition: 0.5s;
+    }
+  }
+  &__title {
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: -0.5px;
+  }
+  &__btn-close {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: url(../../assets/svg/VectorX.svg) no-repeat;
+    cursor: pointer;
+  }
+}
+.hide {
+  display: none;
+}
