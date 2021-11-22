@@ -44,6 +44,10 @@
     max-width: 195px;
     max-height: 239px;
     cursor: pointer;
+    &:hover {
+      color: #ffbca2;
+      transition: 0.5s;
+    }
   }
   &__text {
   }

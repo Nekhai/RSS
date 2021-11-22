@@ -18,6 +18,7 @@
     background: url(../../assets/svg/rs_school_logo.svg);
     &:hover {
       opacity: 0.6;
+      transition: 0.5s;
     }
   }
   &__author {
@@ -28,6 +29,7 @@
     color: #ffffff;
     &:hover {
       opacity: 0.6;
+      transition: 0.5s;
     }
   }
   &__year {
