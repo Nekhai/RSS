@@ -19,7 +19,7 @@ export class Categories {
     cartsCategoties.addEventListener('click', event => {
       let cartTarget = event.target.closest('.categories__item');
       if (cartTarget) {
-        console.log(cartTarget.id)
+        localStorage.setItem('categorie', cartTarget.id)
         window.location.hash = '/questions';
       }
     })

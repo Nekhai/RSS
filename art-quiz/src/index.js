@@ -13,7 +13,10 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 
 import { Utils } from './utils/Utils';
+import images from './images';
+import { cutArray } from './utils/navigation';
 
+cutArray(images, 10);
 const homeInstance = new Home();
 const settingsSettings = new Settings();
 const categoriesInstance = new Categories();
@@ -53,6 +56,8 @@ const router = async () => {
 
   await page.after_render();
 };
+
+
 
 window.addEventListener('hashchange', router);
 window.addEventListener('load', router);
