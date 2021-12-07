@@ -1,8 +1,18 @@
 {
-    "plugins": ["prettier", "import"],
+    "plugins": [    
+        "@typescript-eslint",
+        "prettier",
+        "unicorn" ,
+        "import"
+    ],
     "extends": [
+        "typescript",
+        "airbnb-typescript/base",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:unicorn/recommended",
         "plugin:prettier/recommended",
-        "prettier"
+        "prettier",
+        "prettier/@typescript-eslint"
     ],
     "parserOptions": {
         "ecmaVersion": 2020,
@@ -16,6 +26,12 @@
     "rules": {
         "no-debugger": "off",
         "no-console": 0,
-        "class-methods-use-this": "off"
+        "class-methods-use-this": "off",
+        "filenames/no-index": "error",
+        "filenames/match-exported": ["error", "kebab"],
+        "jest/no-disabled-tests": "error",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/valid-expect": "error"
     }
 }
