@@ -1,0 +1,127 @@
+.visiting {
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 74px 60px;
+    padding: 103px 0 0 0;
+  }
+}
+.card {
+  display: block;
+  &:hover &__title::after {
+    width: 100%;
+    transition: 1s;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__title {
+    position: relative;
+    padding: 25px 0 23px 0;
+    font-family: "Forum", cursive;
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #000000;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      height: 2px;
+      width: 300px;
+      background: #710707;
+    }
+  }
+  &__subtitle {
+    padding: 0 0 10px 0;
+    font-weight: 100;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+  }
+  &__text {
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+  }
+}
+
+@media (max-width: 1024px) {
+  .visiting {
+    &__content {
+      gap: 60px 108px;
+      padding: 83px 0 0 0;
+    }
+  }
+  .card {
+    width: 330px;
+    &__title {
+      font-size: 28px;
+      line-height: 31px;
+      letter-spacing: 5px;
+      &::after {
+        width: 150px;
+      }
+    }
+    &__subtitle {
+      font-weight: 200;
+      font-size: 20px;
+      line-height: 23px;
+    }
+    &__text {
+      font-weight: 200;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  .card__title-2 {
+    letter-spacing: 3px;
+  }
+}
+@media (max-width: 768px) {
+  .visiting {
+    &__content {
+      gap: 40px 56px;
+      padding: 63px 0 40px 0;
+    }
+  }
+  .card {
+    width: 280px;
+    &__title {
+      font-size: 22px;
+      line-height: 34px;
+      letter-spacing: 3px;
+      padding: 19px 0 17px 0;
+      &::after {
+        width: 150px;
+      }
+    }
+    &__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}
+@media (max-width: 420px) {
+  .visiting {
+    &__content {
+      padding: 63px 0 0 0;
+    }
+  }
+  .card {
+    &__title {
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 5px;
+      padding: 23.5px 0 22px 0;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}

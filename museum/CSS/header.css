@@ -1,0 +1,336 @@
+.header {
+  position: relative;
+}
+
+.header__container {
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__burger-wrap {
+  display: none;
+  position: relative;
+  width: 32px;
+  height: 2px;
+  background: #ffffff;
+  -webkit-transform: 200ms;
+          transform: 200ms;
+}
+
+.header__burger-wrap::before {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  right: 0px;
+  width: 32px;
+  height: 2px;
+  background: #ffffff;
+}
+
+.header__burger-wrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 32px;
+  height: 2px;
+  background: #ffffff;
+}
+
+.header__burger-active {
+  -webkit-transform: 200ms;
+          transform: 200ms;
+  background: #030303;
+}
+
+.header__burger-active::before {
+  -webkit-transform: rotate(-45deg) translate(0px, -50%);
+          transform: rotate(-45deg) translate(0px, -50%);
+  top: 50%;
+}
+
+.header__burger-active::after {
+  -webkit-transform: rotate(45deg) translate(0px, 50%);
+          transform: rotate(45deg) translate(0px, 50%);
+  top: 50%;
+}
+
+.header__burger-btn {
+  padding: 9px 0;
+  position: absolute;
+  bottom: -9px;
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo:hover {
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.logo__img {
+  width: 50px;
+  height: 34px;
+  margin: 0 25px 7px 0;
+  background: url(../assets/svg/Vector.svg) center no-repeat;
+}
+
+.logo__text {
+  font-family: "Forum", cursive;
+  font-size: 28px;
+  line-height: 30.91px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.menu__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 830px;
+}
+
+.menu__item {
+  padding: 0 0 0 56px;
+}
+
+.menu__item > a {
+  font-weight: 200;
+  line-height: 25.78px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.menu__item > a:hover {
+  color: #9d8665;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.burger {
+  position: absolute;
+  z-index: 10;
+  left: -2000px;
+  width: 297px;
+  height: 585px;
+  top: 130px;
+  background: #030303;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.burger__menu {
+  padding: 35px 0 0 55px;
+}
+
+.burger__item {
+  padding: 0 0 25px 0;
+}
+
+.burger__item > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 122px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 23px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.burger__item > a:hover {
+  color: #9d8665;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.burger__content {
+  display: none;
+}
+
+.hideTitle {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (max-width: 1024px) {
+  .header__container {
+    height: 130px;
+  }
+  .header__burger-wrap {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    height: 110px;
+  }
+  .logo__img {
+    margin: 0 25px 0 0;
+  }
+  .logo__text {
+    padding: 10px 0 0 0;
+  }
+  .burger {
+    position: absolute;
+    z-index: 10;
+    left: -2000px;
+    width: 100%;
+    height: 585px;
+    top: 100px;
+    background: #030303;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .burger__menu {
+    padding: 45px 0 10px 55px;
+  }
+  .burger__item {
+    padding: 0 0 25px 0;
+  }
+  .burger__item > a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 122px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 2px;
+    color: #ffffff;
+  }
+  .burger__item > a:hover {
+    color: #9d8665;
+    -webkit-transition: 200ms;
+    transition: 200ms;
+  }
+  .burger__content {
+    display: block;
+    background: #030303;
+  }
+  .burger__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 20px;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .burger__line {
+    width: 658px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 35px auto 0;
+  }
+  .burger__social-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 32px 23px 0 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    position: relative;
+  }
+  .header__container {
+    height: 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .logo__img {
+    width: 29px;
+    height: 16px;
+    background: url(../assets/svg/Vector-2.svg) center no-repeat;
+  }
+  .logo__text {
+    padding: 0;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .burger {
+    height: 525px;
+  }
+  .burger__menu {
+    padding: 25px 0 10px 55px;
+  }
+  .burger__img-wrap {
+    width: 95px;
+    height: 95px;
+    overflow: hidden;
+  }
+  .burger__img-wrap img {
+    height: 100%;
+  }
+  .burger__line {
+    width: 310px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 20px auto 0;
+  }
+  .burger__social {
+    padding: 5px 0 0 20px;
+  }
+}
+/*# sourceMappingURL=header.css.map */

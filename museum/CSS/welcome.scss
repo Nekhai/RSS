@@ -1,0 +1,300 @@
+.welcome {
+  padding: 0;
+  &__container {
+    position: relative;
+    min-height: 810px;
+  }
+  &__content {
+    position: absolute;
+    z-index: 3;
+    padding: 150px 0 272px 0;
+  }
+  &__text {
+    padding: 25px 0 75px 0;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: 2px;
+    color: #ffffff;
+  }
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 75px;
+  background: #710707;
+  border-radius: 10px;
+  &:hover {
+    background: #9d8665;
+    transition: 200ms;
+  }
+  & > a {
+    padding: 25px 64px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    color: #ffffff;
+  }
+}
+.slider {
+  &__container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 1000px;
+    height: 750px;
+    overflow: hidden;
+  }
+  &__shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 1000px;
+    height: 750px;
+    background: linear-gradient(
+      90deg,
+      #000000 0%,
+      rgba(0, 0, 0, 0.5) 16.19%,
+      rgba(0, 0, 0, 0) 30.73%
+    );
+    cursor: col-resize;
+  }
+  &__item {
+    position: absolute;
+    display: none;
+    width: 1000px;
+    height: 750px;
+    animation: 0.5s ease-in-out;
+  }
+  &__control {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    width: 600px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #030303;
+    padding: 0 75px;
+  }
+  &__number {
+    display: flex;
+    justify-content: space-between;
+    width: 75px;
+    color: #ffffff;
+    line-height: 40px;
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    margin: 0 0 0 -3px;
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    &:hover {
+      transition: 200ms;
+      background: #9d8665;
+      cursor: pointer;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+  }
+  &__btn-next {
+    background: none;
+    &:hover svg > path {
+      transition: 200ms;
+      fill: #9d8665;
+    }
+  }
+  &__btn-prev {
+    background: none;
+    &:hover svg > path {
+      transition: 200ms;
+      fill: #9d8665;
+    }
+  }
+  &__active {
+    background: #d2b183;
+  }
+}
+.active,
+.next {
+  display: block;
+}
+
+.to-left {
+  animation-name: left;
+}
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+.from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .welcome {
+    &__container {
+      background: url(../assets/img/louvre.jpg) 100% 0/700px 525px no-repeat,
+        #030303;
+    }
+    &__content {
+      padding: 50px 0 192px 0;
+    }
+    &__text {
+      padding: 25px 0 50px 0;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  .btn {
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    & > a {
+      padding: 20px 44px;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+  .slider {
+    &__control {
+      width: 700px;
+      justify-content: space-between;
+      padding: 0 75px 0 224px;
+    }
+    &__number {
+      font-size: 20px;
+      width: 71px;
+    }
+    &__icons {
+      width: 160px;
+    }
+    &__icon {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  .section-title-welcome {
+    line-height: 90px;
+  }
+}
+@media (max-width: 768px) {
+  .welcome {
+    &__container {
+      background: url(../assets/img/1.jpg) 100% 68% no-repeat;
+    }
+    &__content {
+      text-align: center;
+      padding: 0;
+    }
+    &__text {
+      padding: 25px 0 693px 0;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+  .btn {
+    display: none;
+  }
+  .section-title-welcome {
+    line-height: 60px;
+  }
+  .slider {
+    &__control {
+      height: 100px;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 163px 0;
+    }
+  }
+}
+@media (max-width: 420px) {
+  .section-title-welcome {
+    line-height: 40px;
+  }
+  .welcome {
+    &__container {
+      background: url(../assets/img/1.jpg) 0 69%/100% auto no-repeat;
+    }
+    &__content {
+      padding: 5px 0 0 0;
+    }
+    &__content h1 {
+      padding: 0 0 0 4px;
+    }
+    &__content h2 {
+      padding: 0 7px 0 0;
+    }
+    &__text {
+      padding: 25px 0 415px 0;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  .slider {
+    &__control {
+      height: 80px;
+      padding: 0 75px;
+    }
+    &__number {
+      font-size: 16px;
+      width: 50px;
+    }
+    &__icons {
+      width: 75px;
+    }
+    &__icon {
+      width: 7px;
+      height: 7px;
+    }
+    &__btn {
+      width: 55px;
+    }
+    &__btn-next > svg {
+      width: 20px;
+    }
+    &__btn-prev > svg {
+      width: 20px;
+    }
+  }
+}
